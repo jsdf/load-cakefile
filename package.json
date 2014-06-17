@@ -32,6 +32,7 @@
     "url": "git://github.com/jsdf/load-cakefile.git"
   },
   "dependencies": {
-    "xtend": "^3.0.0"
+    "xtend": "^3.0.0",
+    "coffee-script": "^1.7.1"
   }
 }
