@@ -8,7 +8,7 @@ loads/requires tasks and exports from a Cakefile (because normal require() doesn
 
 loadCakefile = require 'load-cakefile'
 
-# get logical contents of Cakefile including task definitions
+# get logical contents of specified Cakefile including task definitions
 loadCakefile.load('./Cakefile')
 # { tasks:
 #    { 'build:lib':
@@ -20,6 +20,11 @@ loadCakefile.load('./Cakefile')
 #         description: 'build client ui',
 #         action: [Function] },
 # ...
+
+# just get tasks
+tasks = loadCakefile.tasks('./Cakefile')
+# run a task
+tasks['build:ui'].action(options)
 
 # just get exports (eg. module.exports), like normal require()
 loadCakefile.require('./Cakefile')

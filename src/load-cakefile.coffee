@@ -32,3 +32,9 @@ exports.load = loadCakefile = (filepath = 'Cakefile') ->
 
 exports.require = requireCakefile = (filepath) ->
   loadCakefile(filepath).exports
+
+exports.tasks = tasksFromCakefile = (filepath) ->
+  loadCakefile(filepath).tasks
+
+exports.runTask = runTaskFromCakefile = (filepath, options) ->
+  loadCakefile(filepath).tasks
